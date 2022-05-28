@@ -1,26 +1,23 @@
 ﻿int inicio, fim;
-
-
-
 string mensagem = "";
 
 try
 {
     Console.Write("Início:");
-    inicio = Convert.ToInt32 (Console.ReadLine()!);
+    inicio = Convert.ToInt32(Console.ReadLine()!);
 
 
     Console.Write("Fim:");
-    fim = Convert.ToInt32 (Console.ReadLine()!);
+    fim = Convert.ToInt32(Console.ReadLine()!);
 
     if (fim < inicio)
     {
-        throw new Exception ("O segundo número não pode ser menor que o primeiro");
+        throw new Exception("O segundo número não pode ser menor que o primeiro");
     }
 
     while (inicio <= fim)
     {
-       
+
         mensagem += $"{inicio++} ";
 
     }
@@ -31,14 +28,14 @@ try
     Console.WriteLine($"{mensagem}");
 
 }
-  catch (FormatException e)
+catch (FormatException e)
 {
     Console.BackgroundColor = ConsoleColor.Red;
     Console.ForegroundColor = ConsoleColor.White;
     Console.WriteLine("É necessário digitar um número válido.");
     Console.WriteLine(e.Message);
 }
-    catch (Exception e)
+catch (Exception e)
 {
     Console.BackgroundColor = ConsoleColor.Red;
     Console.ForegroundColor = ConsoleColor.White;
